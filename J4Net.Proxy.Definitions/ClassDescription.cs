@@ -14,13 +14,13 @@ namespace DSL
         public ClassDescription(
             string name,
             string packageName,
-            List<ModifierDescription> modifiersesDescriptions,
+            List<ModifierDescription> modifiersDescriptions,
             List<FieldDescription> fieldsDescriptions,
             List<MethodDescription> methodsDescriptions,
             List<ClassDescription> dependenciesDescriptions,
             List<ClassDescription> nestedClassesDescriptions,
             bool isNested) 
-                : base(name, modifiersesDescriptions)
+                : base(name, modifiersDescriptions)
         {
             PackageName = packageName;
             FieldsDescriptions = fieldsDescriptions;
