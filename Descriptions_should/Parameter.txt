@@ -1,0 +1,10 @@
+public final class Parameter
+{
+    public String getName()
+	{
+	}
+	
+	public Class getType()
+	{
+	}
+}

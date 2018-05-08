@@ -1,0 +1,33 @@
+public final class Class {
+    public String getName()
+	{
+	}
+	
+    public String getSimpleName()
+	{
+	} 
+	
+    public String getPackageName()
+	{
+	}
+	
+    public native int getModifiers()
+	{
+	}
+	
+    public Class[] getClasses()
+	{
+	}
+	
+    public Field[] getFields()
+	{
+	}
+	
+	public Method[] getMethods()
+	{
+	}
+	
+    public Constructor[] getConstructors()
+	{
+	}
+}

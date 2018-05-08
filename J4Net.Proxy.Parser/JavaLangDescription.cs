@@ -66,7 +66,7 @@ namespace J4Net.Proxy.Parser
                         "java.lang.String"),
                     new MethodDescription(
                         "getModifiers",
-                        new List<ModifierDescription>() { ModifierDescription.PUBLIC },
+                        new List<ModifierDescription>() { ModifierDescription.PUBLIC, ModifierDescription.NATIVE },
                         new List<ParameterDescription>(),
                         "int"),
                     new MethodDescription(

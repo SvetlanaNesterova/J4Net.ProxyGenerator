@@ -1,0 +1,14 @@
+public final class Field
+{
+    public String getName()
+	{
+	}
+	
+	public Class getType()
+	{
+	}
+	
+    public int getModifiers()
+	{
+	}
+}

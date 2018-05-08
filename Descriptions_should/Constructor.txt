@@ -1,0 +1,14 @@
+public final class Constructor
+{
+    public String getName()
+	{
+	}
+	
+    public int getModifiers()
+	{
+	}
+	
+    public Parameter[] getParameters()
+	{
+	}
+}

@@ -1,0 +1,18 @@
+public final class Method
+{
+    public String getName()
+	{
+	}
+	
+    public Class getReturnType()
+	{
+	}
+	
+    public int getModifiers()
+	{
+	}
+	
+    public Parameter[] getParameters()
+	{
+	}
+}
