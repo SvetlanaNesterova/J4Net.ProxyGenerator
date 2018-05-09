@@ -43,8 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="JavaLangDescription.cs" />
-    <Compile Include="JavaReflectionAPIDescription.cs" />
+    <Compile Include="JavaLangDescriptionGenerator.cs" />
+    <Compile Include="JavaReflectionAPIDescriptionGenerator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

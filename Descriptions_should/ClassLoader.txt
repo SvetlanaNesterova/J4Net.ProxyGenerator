@@ -1,7 +1,0 @@
-public abstract class ClassLoader {
-	public Class loadClass(String name) {
-	}	
-	
-    public static ClassLoader getSystemClassLoader() {
-	}
-}
