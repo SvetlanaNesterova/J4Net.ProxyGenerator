@@ -4,7 +4,7 @@ namespace DSL
 {
     public class MethodDescription : Description
     {
-        public readonly List<ParameterDescription> ParametersDescriptions;
+        public readonly List<ParameterDescription> ParametersDescription;
         public readonly string ReturnType;
 
         public MethodDescription(string name, List<ModifierDescription> modifiersDescriptions,

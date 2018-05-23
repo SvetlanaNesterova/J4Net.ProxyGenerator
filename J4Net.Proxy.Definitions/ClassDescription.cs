@@ -10,8 +10,8 @@ namespace DSL
         public readonly string ShortName;
         public readonly List<FieldDescription> FieldsDescriptions;
         public readonly List<MethodDescription> MethodsDescriptions;
+        public readonly List<string> DependenciesNames;
         public readonly List<ClassDescription> NestedClassesDescriptions;
-        public readonly List<string> Dependencies;
         public readonly bool IsNested;
 
         public ClassDescription(
@@ -20,6 +20,7 @@ namespace DSL
             List<ModifierDescription> modifiersDescriptions,
             List<FieldDescription> fieldsDescriptions,
             List<MethodDescription> methodsDescriptions,
+            List<string> dependenciesNames,
             List<ClassDescription> nestedClassesDescriptions,
             bool isNested)
                 : base(packageName + "." + shortName, modifiersDescriptions)
@@ -29,21 +30,9 @@ namespace DSL
             FullName = packageName + "." + shortName;
             FieldsDescriptions = fieldsDescriptions;
             MethodsDescriptions = methodsDescriptions;
+            DependenciesNames = dependenciesNames;
             IsNested = isNested;
             NestedClassesDescriptions = nestedClassesDescriptions;
-
-            Dependencies = CollectAllUsedTypesNames();
-        }
-
-        private List<string> CollectAllUsedTypesNames()
-        {
-            return new List<string>(new HashSet<string>(
-                FieldsDescriptions.Select(field => field.Type)
-                .Concat(MethodsDescriptions
-                    .Select(method => method.ReturnType))
-                .Concat(MethodsDescriptions
-                    .SelectMany(method => method.ParametersDescriptions.Select(parameter => parameter.Type)))
-                .Concat(NestedClassesDescriptions.SelectMany(nestedCls => nestedCls.Dependencies))));
         }
     }
 }
