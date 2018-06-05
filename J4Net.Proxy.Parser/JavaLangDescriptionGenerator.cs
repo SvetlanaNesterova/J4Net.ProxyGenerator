@@ -10,9 +10,9 @@ namespace J4Net.Proxy.Parser
 
         public static LibraryDescription GetJavaLangDescription()
         {
-            var classes = new List<ClassDescription>();
-            classes.Add(GenerateDescriptionForClassLoader());
-            classes.Add(GenerateDescriptionForClass());
+            var classes = new Dictionary<string, ClassDescription>();
+            classes.Add(libName + ".ClassLoader", GenerateDescriptionForClassLoader());
+            classes.Add(libName + ".Class", GenerateDescriptionForClass());
 
             return new LibraryDescription(libName, classes);
         }
@@ -36,6 +36,7 @@ namespace J4Net.Proxy.Parser
                 new List<ModifierDescription>() { ModifierDescription.PUBLIC, ModifierDescription.ABSTRACT },
                 new List<FieldDescription>(),
                 methods,
+                new List<string>() { },
                 new List<ClassDescription>(),
                 false);
             return description;
@@ -98,6 +99,7 @@ namespace J4Net.Proxy.Parser
                 new List<ModifierDescription>() { ModifierDescription.PUBLIC, ModifierDescription.FINAL },
                 new List<FieldDescription>(),
                 methods,
+                new List<string>() { },
                 new List<ClassDescription>(),
                 false);
             return description;

@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace ProxyGenerator.Utils
 {
-    internal static class EnumearbleExtension
+    internal static class EnumerableExtension
     {
         public static bool ContainsAnyFrom<T>(this IEnumerable<T> enumerable, params T[] items)
         {

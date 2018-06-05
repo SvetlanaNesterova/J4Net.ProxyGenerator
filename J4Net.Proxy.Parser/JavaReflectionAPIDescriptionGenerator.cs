@@ -14,12 +14,12 @@ namespace J4Net.Proxy.Parser
 
         public static LibraryDescription GetJRADescription()
         {
-            var classes = new List<ClassDescription>();
-            classes.Add(GenerateDescriptionForModifier());
-            classes.Add(GenerateDescriptionForField());
-            classes.Add(GenerateDescriptionForParameter());
-            classes.Add(GenerateDescriptionForMethod());
-            classes.Add(GenerateDescriptionForConstructor());
+            var classes = new Dictionary<string, ClassDescription>();
+            classes.Add(libName + ".Modifier", GenerateDescriptionForModifier());
+            classes.Add(libName + ".Field", GenerateDescriptionForField());
+            classes.Add(libName + ".Parameter", GenerateDescriptionForParameter());
+            classes.Add(libName + ".Method", GenerateDescriptionForMethod());
+            classes.Add(libName + ".Constructor", GenerateDescriptionForConstructor());
             return new LibraryDescription(libName, classes);
         }
 
@@ -83,6 +83,7 @@ namespace J4Net.Proxy.Parser
                 new List<ModifierDescription>() { ModifierDescription.PUBLIC },
                 new List<FieldDescription>(),
                 methods,
+                new List<string>() { },
                 new List<ClassDescription>(),
                 false);
             return description;
@@ -112,6 +113,7 @@ namespace J4Net.Proxy.Parser
                 new List<ModifierDescription>() { ModifierDescription.PUBLIC, ModifierDescription.FINAL },
                 new List<FieldDescription>(),
                 methods,
+                new List<string>() { },
                 new List<ClassDescription>(),
                 false);
             return description;
@@ -136,6 +138,7 @@ namespace J4Net.Proxy.Parser
                 new List<ModifierDescription>() { ModifierDescription.PUBLIC, ModifierDescription.FINAL },
                 new List<FieldDescription>(),
                 methods,
+                new List<string>() { },
                 new List<ClassDescription>(),
                 false);
             return description;
@@ -165,6 +168,7 @@ namespace J4Net.Proxy.Parser
                 new List<ModifierDescription>() { ModifierDescription.PUBLIC, ModifierDescription.FINAL },
                 new List<FieldDescription>(),
                 methods,
+                new List<string>() { },
                 new List<ClassDescription>(),
                 false);
             return description;
@@ -199,6 +203,7 @@ namespace J4Net.Proxy.Parser
                 new List<ModifierDescription>() { ModifierDescription.PUBLIC, ModifierDescription.FINAL },
                 new List<FieldDescription>(),
                 methods,
+                new List<string>() { },
                 new List<ClassDescription>(),
                 false);
             return description;

@@ -11,7 +11,7 @@ namespace DSL
             List<ParameterDescription> parametersDescription, string returnType)
                 : base(name, modifiersDescriptions)
         {
-            ParametersDescriptions = parametersDescription;
+            ParametersDescription = parametersDescription;
             ReturnType = returnType;
         }
     }
